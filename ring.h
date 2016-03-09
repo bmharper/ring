@@ -60,6 +60,8 @@ public:
 
 	// zero-copy write
 	// You may need to call this function more than once, if the write position wraps around.
+	// Before this function returns, the write position is incremented by the value
+	// returned in 'dstCount'. This means you must write all of those items immediately.
 	// count      The number of objects that you want to write.
 	// dst        The output pointer, into which you can write at least one object.
 	// dstCount   The number of objects that you can write into dst, which will be at least one, if the function returns true.
